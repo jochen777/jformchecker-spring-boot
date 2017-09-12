@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.cyclon-softworx</groupId>
+    <artifactId>jformchecker-spring-boot-parent</artifactId>
+    <version>0.1.16</version>
+  </parent>
+
+  <properties>
+      <formchecker-integration.version>0.1.16</formchecker-integration.version>
+  </properties>
+
+  <artifactId>jformchecker-spring-boot-starter</artifactId>
+  <packaging>jar</packaging>
+  <name>jFormchecker Spring Boot Starter</name>
+  <description>jFormchecker Spring Boot Starter</description>
+
+  <dependencies>
+    <dependency>
+        <groupId>de.cyclon-softworx</groupId>
+        <artifactId>jformchecker-spring-boot-autoconfigure</artifactId>
+        <version>${formchecker-integration.version}</version>
+    </dependency>
+    <dependency>
+       <groupId>de.cyclon-softworx</groupId>
+       <artifactId>jformchecker-integration</artifactId>
+       <version>${formchecker-integration.version}</version>
+   </dependency>
+  </dependencies>
+</project>
