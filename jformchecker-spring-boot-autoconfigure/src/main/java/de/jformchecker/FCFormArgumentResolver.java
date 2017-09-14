@@ -3,6 +3,8 @@ package de.jformchecker;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -19,9 +21,11 @@ public class FCFormArgumentResolver implements HandlerMethodArgumentResolver{
 
 	
 	FormCheckerConfig formcheckerConfig;
+	MessageSource messageSource;
 	
-	public FCFormArgumentResolver(FormCheckerConfig formcheckerConfig) {
+	public FCFormArgumentResolver(FormCheckerConfig formcheckerConfig, MessageSource messageSource) {
 		this.formcheckerConfig = formcheckerConfig;
+		this.messageSource = messageSource;
 	}
 
 	@Override
@@ -42,7 +46,8 @@ public class FCFormArgumentResolver implements HandlerMethodArgumentResolver{
 
 		
 		f.setModel(bean);
-		FC fc = FC.simpleFromBean(formcheckerConfig, bean, de.jformchecker.utils.BeanUtils.fromBean(bean), 
+		FC fc = FC.simpleFromBean(formcheckerConfig, bean, de.jformchecker.utils.BeanUtils.fromBeanWithMessage(bean, 
+				k -> messageSource.getMessage(k, null, LocaleContextHolder.getLocale())), 
 				request.getParameter(FormChecker.SUBMIT_KEY));
 		f.setFC(fc);
 		return f;

@@ -34,7 +34,7 @@ public class JFormCheckerAutoconfiguration extends WebMvcConfigurerAdapter{
  
     @Override
 	public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolver) {
-		argumentResolver.add(new FCFormArgumentResolver(getConfig()));
+		argumentResolver.add(new FCFormArgumentResolver(getConfig(), messageSource));
 	}
 
 }
