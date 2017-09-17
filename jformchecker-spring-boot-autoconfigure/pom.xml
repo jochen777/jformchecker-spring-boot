@@ -5,7 +5,7 @@
 	<groupId>de.cyclon-softworx</groupId>
 	<artifactId>jformchecker-spring-boot-autoconfigure</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1.17-SNAPSHOT</version>
+	<version>0.1.17</version>
 	<name>jformchecker-spring-boot-autoconfigure</name>
 	<url>https://github.com/jochen777/jformchecker-spring-boot</url>
 	<description>jformchecker Spring Boot AutoConfiguration</description>
@@ -44,7 +44,7 @@
 		<java.version>1.8</java.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<jformchecker.version>0.1.17-SNAPSHOT</jformchecker.version>
+		<jformchecker.version>0.1.17</jformchecker.version>
 		<spring-boot.version>1.5.6.RELEASE</spring-boot.version>
 	</properties>
 

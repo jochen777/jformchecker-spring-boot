@@ -1,0 +1,5 @@
+* handle translations correctly (OK)
+* Provide bean from spring, that has some hooks to enhance the form
+  * FormCreator -> creates the complete form
+* FCForm can check, if a FormCheckerform is given as a parameter
+  

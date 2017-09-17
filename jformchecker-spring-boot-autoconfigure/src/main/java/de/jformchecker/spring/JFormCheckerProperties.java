@@ -1,4 +1,4 @@
-package de.jformchecker;
+package de.jformchecker.spring;
 
 import javax.validation.constraints.Pattern;
 
