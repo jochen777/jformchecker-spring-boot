@@ -5,7 +5,7 @@
   <groupId>de.cyclon-softworx</groupId>
   <artifactId>jformchecker-spring-boot-starter</artifactId>
   <packaging>jar</packaging>
-  <version>0.1.16</version>
+  <version>0.1.17</version>
   <name>jformchecker-spring-boot-starter</name>
   <url>https://github.com/jochen777/jformchecker-spring-boot</url>
   <description>jFormchecker Spring Boot Starter</description>
