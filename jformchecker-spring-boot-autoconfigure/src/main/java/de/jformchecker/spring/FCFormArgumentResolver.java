@@ -60,7 +60,7 @@ public class FCFormArgumentResolver implements HandlerMethodArgumentResolver{
 			Object annotatedObjectTarget = applicationContext.getBean(methodParam.getParameterAnnotation(FormEnhancer.class).value());
 			if (annotatedObjectTarget instanceof BeanEnhancer) {
 				BeanEnhancer be = (BeanEnhancer)annotatedObjectTarget;
-				form = be.enhanceForm(form); 
+				form = be.enhanceForm(form, request); 
 			}
 		}
 //		System.err.println("super:" + methodParam.getParameterAnnotation(FormEnhancer.class).value());
